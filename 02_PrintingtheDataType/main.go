@@ -10,7 +10,7 @@ func main() {
 =======
 	var num int = 4623
 >>>>>>> origin/master
-	var str string = "Yellapati"
+	var str string = "Yeleswarapu"
 	var b = true
 
 	fmt.Printf("%T \n", num)
