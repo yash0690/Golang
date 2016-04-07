@@ -1,0 +1,2 @@
+The bug has occured due to the issue with quotation marks with cookies but these are  allowed by browser.
+Sincethe " " JSON is stored incorrectly therefore the system throws an error to the console while running the webpage on a host. 
