@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript BackGround Image Slider</title>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+<body>
+    <h1 id="quote"></h1>
+    <img id="bg1" src="1.jpg" class="bg-active">
+    <img id="bg2" src="2.jpg">
+    <img id="bg3" src="3.jpg">
+    <img id="bg4" src="4.jpg">
+    <script type="text/javascript">
+        var quotes = [
+            "Look deep into nature, and then you will understand everything better.",
+            "Forget not that the earth delights to feel your bare feet and the winds long to play with your hair.",
+            "Wherever you go, no matter what the weather, always bring your own sunshine.",
+            "On earth there is no heaven, but there are pieces of it."
+        ]
+
+        var counter = 1
+
+        function transition() {
+            if(counter == 1) {
+                document.querySelector("#bg1").className = "bg-active";
+                document.querySelector("#bg2").className = "";
+                document.querySelector("#bg3").className = "";
+                document.querySelector("#bg4").className = "";
+                counter++;
+            }
+            else if(counter == 2) {
+                document.querySelector("#bg1").className = "";
+                document.querySelector("#bg2").className = "bg-active";
+                document.querySelector("#bg3").className = "";
+                document.querySelector("#bg4").className = "";
+                counter++;
+            }
+            else if(counter == 3) {
+                document.querySelector("#bg1").className = "";
+                document.querySelector("#bg2").className = "";
+                document.querySelector("#bg3").className = "bg-active";
+                document.querySelector("#bg4").className = "";
+                counter++;
+            }
+            else {
+                document.querySelector("#bg1").className = "";
+                document.querySelector("#bg2").className = "";
+                document.querySelector("#bg3").className = "";
+                document.querySelector("#bg4").className = "bg-active";
+                counter = 1;
+            }
+            var j = Math.floor((Math.random() * 4));
+            document.querySelector("#quote").innerHTML = quotes[j];
+        }
+        setInterval(transition, 4000);
+    </script>
+</body>
+</html>

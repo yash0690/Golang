@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Script Unordered List Creation</title>
+</head>
+<body>
+    <div id="content"></div>
+    <script type="text/javascript" >
+        var unorderedList = [ "Google", "Facebook", "Twitter", "Microsoft" ];
+        // Create the list element:
+        var list = document.createElement('ul');
+        for(var i = 0; i < unorderedList.length; i++) {
+            // Create the list item:
+            var item = document.createElement('li');
+
+            // Set its contents:
+            item.appendChild(document.createTextNode(unorderedList[i]));
+
+            // Add it to the list:
+            list.appendChild(item);
+        }
+        document.getElementById('content').appendChild(list);
+    </script>
+</body>
+</html>

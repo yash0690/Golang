@@ -1,0 +1,32 @@
+body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+}
+
+#quote {
+    z-index: 999999;
+    color: red;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+img {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    filter: alpha(opacity=0); /* For IE8 and earlier */
+    top: 0px;
+    left: 0px;
+}
+
+.bg-active{
+    opacity: 1;
+    filter: alpha(opacity=1); /* For IE8 and earlier */
+    transition: 2s ease;
+}
